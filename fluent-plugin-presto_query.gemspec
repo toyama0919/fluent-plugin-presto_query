@@ -3,8 +3,8 @@
 Gem::Specification.new do |gem|
   gem.name          = "fluent-plugin-presto_query"
   gem.version       = "0.0.1"
-  gem.summary       = %q{Query to Presto plugin for fluentd}
-  gem.description   = %q{Query to Presto plugin for fluentd}
+  gem.summary       = %q{Fluentd Input plugin to execute Presto query and fetch rows.}
+  gem.description   = %q{Fluentd Input plugin to execute Presto query and fetch rows.}
   gem.license       = "MIT"
   gem.authors       = ["Hiroshi Toyama"]
   gem.email         = "toyama0919@gmail.com"
