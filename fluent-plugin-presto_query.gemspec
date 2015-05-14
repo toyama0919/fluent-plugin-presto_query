@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name          = "fluent-plugin-presto_query"
-  gem.version       = "0.0.1"
+  gem.version       = "0.0.2"
   gem.summary       = %q{Fluentd Input plugin to execute Presto query and fetch rows.}
   gem.description   = %q{Fluentd Input plugin to execute Presto query and fetch rows.}
   gem.license       = "MIT"
