@@ -10,7 +10,6 @@ Query to [Presto](https://prestodb.io/) plugin for fluentd
   host presto-cordinator
   catalog store
   schema public
-  interval 10s
   sql select user_id, count(*) as cnt from db01.schema.conversion where user_id is not null group by user_id having count(*) > 1000
   cron 0 * * * * # You can query at a given time, with cron syntax.
 </source>
