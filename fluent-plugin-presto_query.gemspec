@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency "presto-client"
   gem.add_runtime_dependency "parse-cron"
   gem.add_development_dependency 'bundler', '~> 1.7.2'
-  gem.add_development_dependency 'fluentd', '~> 0.10.53'
+  gem.add_development_dependency 'fluentd', '~> 0.10.60'
   gem.add_development_dependency 'pry', '~> 0.10.1'
   gem.add_development_dependency 'rake', '~> 10.3.2'
   gem.add_development_dependency 'rubocop', '~> 0.24.1'
