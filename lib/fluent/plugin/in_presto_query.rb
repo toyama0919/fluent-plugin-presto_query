@@ -2,6 +2,11 @@ module Fluent
   class PrestoQueryInput < Fluent::Input
     Plugin.register_input 'presto_query', self
 
+    # Define `router` method of v0.12 to support v0.10 or earlier
+    unless method_defined?(:router)
+      define_method("router") { Fluent::Engine }
+    end
+
     config_param :tag, :string
     config_param :sql, :string
     config_param :host, :string
@@ -47,7 +52,7 @@ module Fluent
         log.info "sql [#{@sql}]"
         records = exec_query(@sql)
         records.each do |record|
-          Fluent::Engine.emit @tag, Fluent::Engine.now, record
+          router.emit @tag, Fluent::Engine.now, record
         end
       rescue => e
         log.error e
